@@ -25,3 +25,7 @@ Options:
 Almost all options are optional, as long as at least one of the following is supplied: the header, the footer, the message, or the fields.
 
 To specify the Slack API token, set the `SLACK_TOKEN` environment variable. You can omit the token when sending messages via a Slack Incoming Webhook.
+
+## TODO
+
+- [ ] adopt rustls-platform-verifier feature in reqwest (ref. https://github.com/seanmonstar/reqwest/pull/2286)
