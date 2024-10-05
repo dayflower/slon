@@ -26,6 +26,15 @@ Almost all options are optional, as long as at least one of the following is sup
 
 To specify the Slack API token, set the `SLACK_TOKEN` environment variable. You can omit the token when sending messages via a Slack Incoming Webhook.
 
+## Docker
+
+The Docker image is available at [dayflower/slon](https://hub.docker.com/r/dayflower/slon).
+
+```
+$ SLACK_TOKEN=xxx docker run --rm -e SLACK_TOKEN dayflower/slon:latest -c '#general' -m 'Hello, world!'
+```
+
 ## TODO
 
+- [ ] Implement as GitHub Custom Actions
 - [ ] adopt rustls-platform-verifier feature in reqwest (ref. https://github.com/seanmonstar/reqwest/pull/2286)
