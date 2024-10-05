@@ -221,14 +221,14 @@ fn main() {
                 if result.ok {
                     if args.verbose {
                         println!("OK\n\n{}", &response_text);
-                    } else {
-                        eprintln!(
-                            "ERROR: {}\n\n{}",
-                            result.error.unwrap_or("(null)".to_string()),
-                            &response_text
-                        );
-                        std::process::exit(1);
                     }
+                } else {
+                    eprintln!(
+                        "ERROR: {}\n\n{}",
+                        result.error.unwrap_or("(null)".to_string()),
+                        &response_text
+                    );
+                    std::process::exit(1);
                 }
             } else {
                 eprintln!("ERROR: {}\n{}", response_status, &response_text);
